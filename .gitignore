@@ -1,0 +1,26 @@
+# Node modules (The heavy stuff)
+node_modules/
+event-frontend/node_modules/
+
+# Production builds
+build/
+event-frontend/build/
+event-management/target/
+
+# Java/Maven specific
+*.class
+*.jar
+*.war
+event-management/.mvn/
+event-management/.settings/
+event-management/.project
+event-management/.classpath
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
