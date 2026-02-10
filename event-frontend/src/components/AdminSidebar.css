@@ -1,0 +1,44 @@
+/* Sidebar - No changes needed here */
+.admin-sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #212529;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Updated: The margin is now conditional */
+.main-content-admin {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 30px;
+    transition: all 0.3s ease;
+    width: 100%; /* Default to full width */
+}
+
+/* This class is only added when an Admin is logged in/on an Admin page */
+.main-content-admin.with-sidebar {
+    margin-left: 260px; 
+    width: calc(100% - 260px);
+}
+
+.hover-effect:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 70px;
+    }
+    .admin-sidebar span {
+        display: none; 
+    }
+    .main-content-admin.with-sidebar {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+}

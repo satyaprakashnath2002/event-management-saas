@@ -1,0 +1,61 @@
+/* --- Core Layout Fixes --- */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  background-color: #f8f9fa; /* Light grey for admin bg */
+}
+
+.main-wrapper {
+  min-width: 0; /* Critical for flexbox children behavior */
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- The "White Circle" Fix --- */
+/* Remove or comment out the .App-header if you aren't using the default React landing page */
+.App-header {
+  display: none; /* This was likely causing the massive centered white area */
+}
+
+.search-container {
+  max-width: 500px;
+  max-height: 45px;
+  margin: 0 auto;
+  border-radius: 30px !important;
+  overflow: hidden;
+}
+
+.search-container input {
+  border-radius: 30px !important;
+  height: 40px;
+}
+
+/* --- Admin Specific Layout --- */
+.admin-sidebar-container {
+  width: 260px;
+  min-height: 100vh;
+  background: #212529;
+  flex-shrink: 0;
+  z-index: 1050;
+}
+
+.admin-layout-wrapper {
+  background-color: #f4f7f6;
+  min-height: 100vh;
+}
+
+/* --- UI Enhancements --- */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.3); /* Darker glassmorphism for readability */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.transition-hover:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}

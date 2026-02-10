@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.ticket-cut-top, .ticket-cut-bottom {
+    position: absolute;
+    left: 33.333%; /* Align with the column split */
+    width: 20px;
+    height: 20px;
+    background-color: #f8f9fa; /* Matches your body background */
+    border-radius: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.ticket-cut-top {
+    top: -10px;
+}
+
+.ticket-cut-bottom {
+    bottom: -10px;
+}
